@@ -1,0 +1,7 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" rx="16" fill="#FFF3EB"/>
+  <circle cx="200" cy="120" r="50" fill="#FFD4B2"/>
+  <text x="200" y="128" text-anchor="middle" font-size="48" fill="#FF8C42">🍳</text>
+  <text x="200" y="200" text-anchor="middle" font-family="system-ui" font-size="18" fill="#FF8C42" font-weight="600">宝宝菜谱</text>
+  <text x="200" y="230" text-anchor="middle" font-family="system-ui" font-size="14" fill="#FFB088">图片加载中...</text>
+</svg>

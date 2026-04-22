@@ -1,0 +1,56 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "baby-recipe",
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": ".open-next/worker.js",
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "baby-recipe-db",
+      "database_id": "YOUR_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ],
+
+  "r2_buckets": [
+    {
+      "binding": "BUCKET",
+      "bucket_name": "baby-recipe-images"
+    }
+  ],
+
+  "kv_namespaces": [
+    {
+      "binding": "CACHE",
+      "id": "YOUR_KV_NAMESPACE_ID"
+    }
+  ],
+
+  "vars": {
+    "QWEN_API_BASE_URL": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "QWEN_MODEL_NAME": "qwen3.6-35b-a3b",
+    "DEFAULT_PROVINCE": "浙江省",
+    "DEFAULT_CITY": "杭州市",
+    "ENABLE_XHS_SOURCE": "false",
+    "ENABLE_DOUYIN_SOURCE": "false",
+    "ENABLE_KUAISHOU_SOURCE": "false",
+    "FEED_MAX_ITEMS": "20",
+    "ENABLE_AUTO_UPDATE": "true",
+    "UPDATE_SCHEDULE": "0 */6 * * *",
+    "R2_PUBLIC_URL": ""
+  },
+
+  "triggers": {
+    "crons": [
+      "0 3 * * *",
+      "0 4 * * *",
+      "0 */6 * * *"
+    ]
+  }
+}
